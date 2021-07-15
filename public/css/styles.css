@@ -1,0 +1,75 @@
+:root {
+  --main-color-purple: #A683E3;
+  --second-color-purple: #E4E9FD;
+  /*#c0a717*/
+  /*#f5c690*/
+}
+
+body {
+  background: #30475E;
+}
+
+header {
+  padding: 50px;
+}
+
+header h1 {
+  margin: 0 auto;
+  color: #fff;
+  background-color: #F05454;
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#todo-container {
+  margin: 0 auto;
+  width: 30%;
+  background: #222831;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+input[type='checkbox'] {
+  margin-bottom: 40px;
+}
+
+label {
+  font-family: 'Space Mono', monospace;
+}
+
+label, p {
+  color: #DDDDDD;
+}
+
+#rick-img {
+  padding-top: 2rem;
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+input[type="text"] {
+  width: 86%;
+  margin-bottom: 20px;
+}
+
+button {
+  align-self: flex-end;
+  width: 45px;
+  height: 45px;
+  margin-left: 7px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #F05454;
+  border: none;
+}

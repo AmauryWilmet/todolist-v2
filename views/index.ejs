@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <title>TO-DO LIST</title>
+</head>
+<body>
+  <header>
+    <h1><%= days[date.getDay() - 1] %> , <%= months[date.getMonth()] + ' ' + date.getDate() %></h1>
+  </header>
+  <img id="rick-img" src="img/rick3.png" alt="rick">
+  <div id="todo-container">
+    <form class="" action="/" method="post">
+        <% for (let i = 0; i < todoList.length; i++) { %>
+          <div>
+            <input type="checkbox" name="elementTodo" class="elementTodo">
+            <label for="elementTodo"><%= todoList[i] %></label>
+          </div>
+        <% } %>
+      <div>
+        <input type="text" name="newTodo">
+        <button type="submit" name="button"><i class="fas fa-plus"></i></button>
+      </div>
+    </form>
+  </div>
+  <script src="https://kit.fontawesome.com/9e884bb0fe.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
