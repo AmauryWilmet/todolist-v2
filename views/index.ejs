@@ -11,6 +11,9 @@
   <title>TO-DO LIST</title>
 </head>
 <body>
+  <div id="star-bg">
+    <img src="img/bg2.jpg" class="star" style="top: -200px; margin-left: -10px;" alt="" />
+  </div>
   <header>
     <h1><%= days[date.getDay() - 1] %> , <%= months[date.getMonth()] + ' ' + date.getDate() %></h1>
   </header>
@@ -18,13 +21,13 @@
   <div id="todo-container">
     <form class="" action="/" method="post">
         <% for (let i = 0; i < todoList.length; i++) { %>
-          <div>
+          <div class="checkbox-container">
             <input type="checkbox" name="elementTodo" class="elementTodo">
             <label for="elementTodo"><%= todoList[i] %></label>
           </div>
         <% } %>
       <div>
-        <input type="text" name="newTodo">
+        <input type="text" name="newTodo" placeholder="Nouvelle tache">
         <button type="submit" name="button"><i class="fas fa-plus"></i></button>
       </div>
     </form>

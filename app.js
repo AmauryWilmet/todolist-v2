@@ -12,15 +12,17 @@ let todoList = ['Exemple1', 'Exemple2'];
 let date = new Date();
 let days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
 let months = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre'];
+let topRandom = 0;
+let rightRandom = 0;
 
 app.get('/', function(req, res) {
-  res.render('index', {todoList:todoList, date: date, days:days, months: months});
+  res.render('index', {todoList:todoList, date: date, days:days, months: months, topRandom:topRandom, rightRandom:rightRandom});
 });
 
 app.post('/', function(req, res) {
   let newTodoElement = req.body.newTodo;
   todoList.push(newTodoElement);
-  res.render('index', {todoList:todoList, date: date, days:days, months: months});
+  res.render('index', {todoList:todoList, date: date, days:days, months: months, topRandom:topRandom, rightRandom:rightRandom});
 });
 
 app.listen(3000, function() {

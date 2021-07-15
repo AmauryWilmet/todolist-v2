@@ -1,4 +1,5 @@
 $(function() {
+  animateStar();
   $('.elementTodo').click(function() {
     if ($(this).attr("checked")) {
       $(this).removeAttr("checked");
@@ -9,3 +10,9 @@ $(function() {
     }
   });
 });
+
+function animateStar() {
+  $('.star').delay(500).animate({'top': -560}, 5000 * 4);
+  $('.star').delay(0).animate({'top': -400}, 5000 * 4, animateStar);
+
+}
